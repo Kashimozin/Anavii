@@ -1,74 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anavi — Loja de Joias</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anavi</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-
-<header class="header">
-    <div class="top-bar">
-        <img src="fotoanavi.jpg" alt="Logo Anavi" class="logo">
-        <input type="text" placeholder="Buscar produtos" class="search-bar">
-        <div class="login-btn">
-            <button>Login</button>
+    <header class="header">
+        <div class="logo">
+            <img src="fotoanavi.jpg" alt="Anavi" class="logo-img">
         </div>
-    </div>
-
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="#anes">Anéis</a></li>
-            <li><a href="#colares">Colares</a></li>
-            <!-- Mais categorias se quiser -->
-        </ul>
-    </nav>
-</header>
-
-<section class="banner-destaque">
-    <img src="banner1.jpg" alt="Promoção" class="banner-img">
-</section>
-
-<main class="produtos-container">
-
-    <section id="anes" class="categoria-section">
-        <h2 class="categoria-titulo">Anéis</h2>
-        <div class="produtos-grid">
-            <div class="produto-card">
-                <img src="anel1.jpg" alt="Anel 1">
-                <h3>Anel Elegante</h3>
-                <p>R$ 150,00</p>
-                <button>Adicionar ao carrinho</button>
-            </div>
-            <div class="produto-card">
-                <img src="anel2.jpg" alt="Anel 2">
-                <h3>Anel Moderno</h3>
-                <p>R$ 180,00</p>
-                <button>Adicionar ao carrinho</button>
-            </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Busque seu produto...">
+            <button class="search-btn">🔍</button>
         </div>
-    </section>
+        
+        <nav class="user-nav">
+            <a href="#">Login</a>
+            <a href="#">Carrinho (0)</a>
+        </nav>
+    </header>
 
-    <section id="colares" class="categoria-section">
-        <h2 class="categoria-titulo">Colares</h2>
-        <div class="produtos-grid">
-            <div class="produto-card">
-                <img src="colar1.jpg" alt="Colar 1">
-                <h3>Colar Elegante</h3>
-                <p>R$ 200,00</p>
-                <button>Adicionar ao carrinho</button>
-            </div>
-            <div class="produto-card">
-                <img src="colar2.jpg" alt="Colar 2">
-                <h3>Colar Moderno</h3>
-                <p>R$ 250,00</p>
-                <button>Adicionar ao carrinho</button>
-            </div>
-        </div>
-    </section>
+    <main class="container">
+        <section class="banner-principal">
+            <h1>Destaque da Semana!</h1>
+            <p>As melhores joias, só aqui.</p>
+        </section>
 
-</main>
+        <section class="ofertas-container">
+            <h2>Ofertas Imperdíveis</h2>
+            
+            <div class="produto-card">
+                <img src="placeholder-img.jpg" alt="Imagem do Produto" class="produto-img">
+                <p class="produto-nome">Placa de Vídeo RTX 4090</p>
+                <div class="preco-info">
+                    <p class="preco-antigo">R$ 15.000,00</p>
+                    <p class="preco-destaque">R$ 12.999,00</p>
+                    <p class="parcelamento">10x de R$ 1.299,90 sem juros</p>
+                </div>
+                <button class="btn-comprar">Comprar Agora</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Anavi. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>

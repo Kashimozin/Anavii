@@ -1,165 +1,165 @@
+/* Definição das variáveis de cor (suas cores personalizadas) */
+:root {
+    --cor-destaque: #eab7ba; /* Rosa Claro - Ação (CTA) */
+    --cor-secundaria: #a0c1ca; /* Azul Claro - Header/Fundo de Seção */
+    --cor-fundo: #f9f5f2; /* Quase Branco - Fundo da Página */
+    --cor-texto-escuro: #333333; /* Texto Principal */
+    --cor-preco-forte: #cc0000; /* Vermelho/Marrom para o preço em si */
+}
+
+/* Reset básico e fundo da página */
 body {
+    background-color: var(--cor-fundo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-texto-escuro);
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f9f5f2, #eab7ba);
+    line-height: 1.6;
 }
 
-/* Header Amazon-style */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 1. CABEÇALHO (HEADER) */
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: linear-gradient(135deg, #eab7ba, #a0c1ca);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.top-bar {
+    background-color: var(--cor-secundaria);
+    padding: 15px 50px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    width: 180px;
-    height: auto;
+/* Definições para a Imagem do Logo */
+.logo-img {
+    height: 35px; /* Altura do logo */
+    width: auto; /* Mantém a proporção */
+    display: block; 
 }
 
 .search-bar {
-    flex: 1;
-    margin: 0 20px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: none;
-    font-size: 14px;
+    display: flex;
+    width: 40%;
 }
 
-.login-btn button {
-    padding: 6px 10px;
+.search-bar input {
+    padding: 10px;
     border: none;
-    border-radius: 6px;
-    background: #a0c1ca;
+    border-radius: 5px 0 0 5px;
+    width: 100%;
+}
+
+.search-btn {
+    padding: 10px 15px;
+    background-color: #72a4b3; /* Um tom um pouco mais escuro de Azul Claro */
     color: white;
-    font-weight: bold;
+    border: none;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
-.login-btn button:hover {
-    background: #88a8b1;
-}
-
-/* Navbar categorias */
-.navbar .nav-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-}
-
-.navbar .nav-list li {
-    margin: 0 15px;
-}
-
-.navbar .nav-list a {
+.user-nav a {
+    color: var(--cor-texto-escuro);
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    margin-left: 20px;
+    font-weight: 500;
 }
 
-.navbar .nav-list a:hover {
-    color: #a0c1ca;
+/* 2. BANNER PRINCIPAL */
+.banner-principal {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-escuro);
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 8px;
 }
 
-/* Banner */
-.banner-destaque {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+.banner-principal h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-.banner-destaque .banner-img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* Produtos */
-.produtos-container {
-    max-width: 1200px;
-    margin: 20px auto 40px auto;
-    padding: 0 20px;
-}
-
-.categoria-titulo {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.produtos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+/* 3. OFERTAS E PRODUTOS */
+.ofertas-container h2 {
+    color: var(--cor-secundaria);
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .produto-card {
-    background: white;
-    border-radius: 12px;
-    padding: 15px;
+    background-color: white;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 300px;
 }
 
-.produto-card img {
-    width: 100%;
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.produto-img {
+    max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-.produto-card h3 {
-    margin: 10px 0 5px 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.produto-card p {
-    font-size: 16px;
-    color: #eab7ba;
+.produto-nome {
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.produto-card button {
-    margin-top: 10px;
-    padding: 10px;
+.preco-antigo {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.preco-destaque {
+    font-size: 1.8em;
+    color: var(--cor-preco-forte); 
+    font-weight: 900;
+    margin: 5px 0;
+}
+
+.parcelamento {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO PRINCIPAL DE COMPRA (CTA) */
+.btn-comprar {
+    background-color: var(--cor-destaque); /* Rosa Claro - Ação */
+    color: var(--cor-texto-escuro); 
     border: none;
-    border-radius: 8px;
-    background: #eab7ba;
-    color: white;
-    font-weight: bold;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-weight: 800;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
 }
 
-.produto-card button:hover {
-    background: #d89aa2;
+.btn-comprar:hover {
+    background-color: #d1a0a3; /* Tom ligeiramente mais escuro para o hover */
 }
 
-/* Responsivo */
-@media(max-width:768px){
-    .top-bar {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .search-bar {
-        width: 100%;
-        margin: 0;
-    }
-    .navbar .nav-list {
-        flex-direction: column;
-        align-items: center;
-    }
-    .produtos-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
+/* 4. RODAPÉ (FOOTER) */
+.footer {
+    background-color: #e0e0e0; 
+    color: var(--cor-texto-escuro);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
 }
